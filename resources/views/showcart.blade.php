@@ -66,6 +66,7 @@
             </div>
         </div>
         <div class="row">
+            @if(count($carts) >0)
             <div class="col-lg-12">
                 <table class="table">
                     <thead class="thead-light">
@@ -131,6 +132,9 @@
                 </div>
                 </form>
             </div>
+            @else
+                <h3>You haven't chosen any food yet?</h3>
+            @endif
         </div>
     </div>
 </div>
