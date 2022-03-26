@@ -24,6 +24,11 @@
                         {{ session('status') }}
                     </div>
                 @endif
+                    @if (session('deleted'))
+                        <div class="alert alert-danger" role="alert">
+                            {{ session('deleted') }}
+                        </div>
+                    @endif
                 <div class="row">
                     <div class="col-12 grid-margin stretch-card">
 

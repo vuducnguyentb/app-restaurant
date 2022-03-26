@@ -81,7 +81,7 @@ class AdminController extends Controller
         $reservation->time=$request->time;
         $reservation->message=$request->message;
         $reservation->save();
-        return redirect()->back() ->with('alert', 'Reserved!');
+        return redirect()->back() ->with('status', 'Reservation success !');
     }
     public function viewreservation()
     {

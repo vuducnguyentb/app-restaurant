@@ -29,10 +29,11 @@
             </div>
             <div class="col-lg-6">
                 <div class="contact-form">
+                    @if ($message = Session::get('status'))
+                    <div class="alert alert-warning alert-block">{{ $message }}</div>
+                    @endif
                     <form id="contact" action="{{url('reservation')}}" method="post">
-
                         @csrf
-
                         <div class="row">
                             <div class="col-lg-12">
                                 <h4>Table Reservation</h4>
@@ -58,8 +59,8 @@
                             <div class="col-lg-6">
                                 <div id="filterDate2">
                                     <div class="input-group date" data-date-format="dd/mm/yyyy">
-                                        <input  name="date" id="date" type="text" class="form-control" placeholder="dd/mm/yyyy">
-                                        <div class="input-group-addon" >
+                                        <input name="date" id="date" type="text" class="form-control" placeholder="dd/mm/yyyy">
+                                        <div class="input-group-addon">
                                             <span class="glyphicon glyphicon-th"></span>
                                         </div>
                                     </div>
@@ -81,7 +82,8 @@
                                 </fieldset>
                             </div>
                         </div>
-                    </form>                </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
